@@ -16,6 +16,6 @@ RUN pip install -r requirements.txt
 
 # Run the application:
 COPY server.py .
-EXPOSE 5000/tcp
+EXPOSE 5000
 ENV FLASK_APP="server.py"
-CMD ["python", "-m","flask","run"]
+CMD ["python", "-m","flask","run","--host=0.0.0.0"]
